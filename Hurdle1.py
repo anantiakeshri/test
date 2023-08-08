@@ -17,3 +17,6 @@
 #         turn_left()
     
 # goal()
+
+
+#Remove the comments in the code before moving ahead.
