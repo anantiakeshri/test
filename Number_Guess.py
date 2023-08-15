@@ -52,7 +52,6 @@ def level_hard():
                 print(f"You got it! The answer was {random_chosen_number}.\n")
                 should_continue = True
                 
-            
 if level == "easy":
     level_easy()
 elif level == "hard":
