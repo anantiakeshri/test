@@ -9,7 +9,7 @@ numbers = list(range(1, 101))
 random_chosen_number = random.choice(numbers)
 
 print("I'm thinking of a number between 1 to 100.")
-print(f"Pssst, the correct answer is {random_chosen_number}")
+# print(f"Pssst, the correct answer is {random_chosen_number}")
 level = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 
 should_continue = False
