@@ -25,10 +25,12 @@ def level_easy():
                 print (f"Too high.\nGuess again.\nYou have {easy_attempt} attempt remaining.\n")
             elif number_guess < random_chosen_number and easy_attempt != 0:
                 print(f"Too low.\nGuess again.\nYou have {easy_attempt} attempt remaining.\n")
-            elif easy_attempt == 0:
-                print ("You are out of attempt, you lose.")
+            elif easy_attempt == 0 and number_guess == random_chosen_number:
+                print(f"You got it right! The answer was {random_chosen_number}")
                 should_continue = True
-                break
+            elif easy_attempt == 0:
+                print("You are out of attempt, you lose.\nBetter luck next time!")
+                should_continue = True
             else:
                 print(f"You got it! The answer was {random_chosen_number}.\n")  
                 should_continue = True
@@ -44,10 +46,12 @@ def level_hard():
                 print(f"Too high.\nGuess again.\nYou have {hard_attempt} attempt remaining.\n")
             elif number_guess < random_chosen_number and hard_attempt != 0:
                 print(f"Too low.\nGuess again.\nYou have {hard_attempt} attempt remaining.\n")
-            elif hard_attempt == 0:
-                print ("You are out of attempt, you lose.")
+            elif hard_attempt == 0 and number_guess == random_chosen_number:
+                print(f"You got it right! The answer was {random_chosen_number}")
                 should_continue = True
-                break
+            elif hard_attempt == 0:
+                print("You are out of attempt, you lose.\nBetter luck next time!")
+                should_continue = True
             else:
                 print(f"You got it! The answer was {random_chosen_number}.\n")
                 should_continue = True
