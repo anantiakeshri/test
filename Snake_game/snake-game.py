@@ -1,8 +1,8 @@
 # The famous Snake Game. Code by Anantia Keshri
 from turtle import Screen
-from Snake_game.snake import Snake
-from Snake_game.food import Food
-from Snake_game.scoreboard import Scoreboard
+from snake import Snake
+from food import Food
+from scoreboard import Scoreboard
 import time
 
 screen = Screen()
@@ -37,17 +37,17 @@ while is_game_on:
      
     """ Detect collision with wall """   
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -290:
-        is_game_on = False
-        score.game_over()
+        score.reset()
+        snake.reset()
         
     """Detect collision with tail"""
-    for segment in snake.segments[1:]:
-    #if head collides with any segment in the tail then GAME OVER
-        if snake.head.distance < 10:
-            is_game_on = False
-            score.game_over() 
-    
+    for segment in snake.segments:
+        #if head collides with any segment in the tail then GAME OVER
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            score.reset()
+            snake.reset()
 
-    
 
 screen.exitonclick()
